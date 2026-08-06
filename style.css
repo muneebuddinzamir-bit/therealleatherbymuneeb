@@ -1,7 +1,20 @@
-*body {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
   font-family: 'Domine', serif;
   font-style: normal;
   font-weight: 400;
+  color: #1f1815;
+  background: #fff;
 }
 
 h1, h2, h3, h4 {
@@ -23,6 +36,11 @@ h1, h2, h3, h4 {
 
 .promo-link:hover{
   text-decoration: underline !important;
+}
+
+.promo-link {
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Navigation Bar */
@@ -239,7 +257,7 @@ h1, h2, h3, h4 {
 }
 
 .product-card {
-  width: 450px;
+  width: min(450px, 100%);
   background-color: #e3e3e39c;
   border-radius: 20px;
   overflow: hidden;
@@ -344,7 +362,7 @@ h1, h2, h3, h4 {
 
   .review-card {
     position: relative;
-    width: 450px;
+    width: min(450px, 100%);
     height: 450px;
     background-size: cover;
     background-position: center;
@@ -386,7 +404,7 @@ h1, h2, h3, h4 {
     border: none;
     padding: 3px 5px 2px 5px;
     background: white;
-    color: balck;
+    color: black;
     border-radius: 12px;
   }
 
@@ -517,6 +535,7 @@ h1, h2, h3, h4 {
 }
 
 .view-all-btn {
+  display: inline-block;
   background-color: #321a16 !important;
   color: #fff !important;
   padding: 18px 10% !important;
@@ -526,6 +545,7 @@ h1, h2, h3, h4 {
   border: none;
   cursor: pointer;
   font-weight: bold;
+  text-decoration: none;
   transition: background 0.3s ease;
 }
 
@@ -1393,7 +1413,7 @@ footer
   }
 }
 
-/*------/*
+/* Additional responsive layouts */
 
 /* --- Mobile Layouts (max-width: 767px) --- */
 @media (max-width: 767px) 
@@ -1660,6 +1680,8 @@ footer
     background: none;
     border: none;
     padding: 5px;
+    cursor: pointer;
+    z-index: 2;
   }
 
   .mobile-menu-button span {
@@ -1718,7 +1740,7 @@ footer
     color: white;
     padding: 8px 20px;
     border-radius: 4px;
-    font-weight: b5old;
+    font-weight: bold;
     text-align: center;
     font-size: 14px;
   }
@@ -1735,9 +1757,9 @@ footer
   background-color: #d4d4d4; /* Lighter gray to match your image */
   font-weight: bold;
   font-family: sans-serif;
-  width: 107%; /* Full width of its container */
+  width: calc(100% + 30px); /* Span the padded header width */
   margin-top: 10px;
-  box-sizing: border-box
+  box-sizing: border-box;
   
   }
 
@@ -1752,6 +1774,11 @@ footer
     z-index: 100;
     padding: 15px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+  }
+
+  .mobile-nav-menu.is-open {
+    display: block;
   }
 
   .mobile-nav-menu a {
@@ -1796,4 +1823,85 @@ footer
         font-size: 10vw; 
         text-align: center; 
     }
+}
+
+@media (max-width: 768px) {
+  .leather-grid {
+    margin-right: 15px;
+    margin-left: 15px;
+    padding: 0;
+  }
+
+  .product-row,
+  .review-grid {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .heirloom-section {
+    margin-top: 10px;
+    padding: 0 15px;
+  }
+
+  .text_content_child {
+    padding: 30px 20px;
+  }
+
+  .large-number {
+    font-size: 30px;
+  }
+
+  .description br,
+  .faq-para br {
+    display: none;
+  }
+
+  .faq-container {
+    padding: 0 15px;
+  }
+
+  .faq-para {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .faqs {
+    width: 100%;
+  }
+
+  .faq-questions {
+    gap: 20px;
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 12px 8px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
+    line-height: 1.7;
+    padding: 0 8px;
+  }
+
+  .section1-image {
+    text-align: center;
+  }
+
+  .section1-image img {
+    max-width: 180px;
+    height: auto;
+    padding-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

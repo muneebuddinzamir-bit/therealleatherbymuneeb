@@ -4,20 +4,24 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover heirloom-quality leather work bags, travel bags, and accessories from The Real Leather Co.">
+    <meta name="theme-color" content="#321a16">
     <title>The Real Leather CO. | Luxury Leather Goods</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;700&amp;display=swap" rel="stylesheet">
 
 </head>
 <body>
   <div class="mobile-header">
   <div class="mobile-promo-banner">
-    20% Off Everything Summer Essentials Sale | Use Code SUMNER20 at Checkout | Ends Soon
+    20% Off Everything Summer Essentials Sale | Use Code SUMMER20 at Checkout | Ends Soon
   </div>
 
   <div class="mobile-header-content">
     <!-- Hamburger Menu Button -->
-    <button class="mobile-menu-button" id="mobileMenuButton">
+    <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Open navigation menu" aria-controls="mobileNavMenu" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
@@ -40,11 +44,11 @@
 
     <!-- Mobile Navigation Menu -->
     <div class="mobile-nav-menu" id="mobileNavMenu">
-      <a href="#">Best Sellers</a>
-      <a href="#">Work Bags</a>
-      <a href="#">Travel Bags</a>
-      <a href="#">Accessories</a>
-      <a href="#">Our Story</a>
+      <a href="#best-sellers">Best Sellers</a>
+      <a href="#shop-categories">Work Bags</a>
+      <a href="#shop-categories">Travel Bags</a>
+      <a href="#shop-categories">Accessories</a>
+      <a href="#our-story">Our Story</a>
     </div>
   </div>
 </div>
@@ -53,7 +57,7 @@
 <!-- top header -->
 <header>
   <div class="promo-banner">
-    <a href="" class="promo-link" style="color: #fff; text-decoration: none;">20% Off Everything Summer Essentials Sale | Use Code SUMMER20 at Checkout | Ends Soon</a>
+    <a href="#best-sellers" class="promo-link">20% Off Everything Summer Essentials Sale | Use Code SUMMER20 at Checkout | Ends Soon</a>
   </div>
 
   <div class="nav-wrapper">
@@ -63,8 +67,8 @@
   </div>
 
   <div class="nav-links">
-    <a href="#">Best Sellers</a>
-    <a href="#" id="work-bags-link">Work Bags</a>
+    <a href="#best-sellers">Best Sellers</a>
+    <a href="#shop-categories" id="work-bags-link">Work Bags</a>
     <div class="dropdown-menu" id="work-bags-menu">
       <div class="menu-column adjusted_img_section">
         <img src="./img/ra4.png" class="left_side_dropdown_pic" alt="Work Bags">
@@ -95,7 +99,7 @@
         </ul>
       </div>
     </div>
-    <a href="#" id="travel-bags-link">Travel Bags</a>
+    <a href="#shop-categories" id="travel-bags-link">Travel Bags</a>
       <div class="dropdown-menu" id="travel-bags-menu">
       <div class="menu-column adjusted_img_section">
         <img src="./img/l2.png" class="left_side_dropdown_pic" alt="Travel Bags">
@@ -126,7 +130,7 @@
         </ul>
       </div>
     </div>
-    <a href="#" id="accessories-link">Accessories</a>
+    <a href="#shop-categories" id="accessories-link">Accessories</a>
     <div class="dropdown-menu" id="accessories-menu">
       <div class="menu-column adjusted_img_section">
         <img src="./img/l6.png" class="left_side_dropdown_pic" alt="Accessories">
@@ -158,10 +162,10 @@
         </ul>
       </div>
     </div>
-    <a href="#">Our Story</a>
+    <a href="#our-story">Our Story</a>
 
     <div class="nav-icons">
-      <button>
+      <button type="button" aria-label="Search">
         <!-- Search icon -->
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
           <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 
@@ -170,7 +174,7 @@
           0 5.5 5.5 0 0 1 11 0z"/>
         </svg>
       </button>
-      <button>
+      <button type="button" aria-label="View shopping cart">
         <!-- Cart icon -->
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
           <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 
@@ -191,7 +195,7 @@
 
   <div class="bottom-info-bar">
     <span>50,000+ Heirloom Bags Shipped</span>
-    <span>1 Year Warranty & 30 Day Returns</span>
+    <span>1 Year Warranty &amp; 30 Day Returns</span>
     <span>Rated 4.8/5 from 1300+ Reviews</span>
   </div>
 </header>
@@ -210,7 +214,7 @@
   <img src="img/pic55.p.png" alt="tep">
 </div>
 </section>
-<div class="leather-grid">
+<div class="leather-grid" id="shop-categories">
   <!-- Row 1 -->
   <div class="grid-item">
     <img src="img/L1.png" alt="Leather Briefcases">
@@ -240,7 +244,7 @@
   </div>
 </div>
 <div class="button-wrapper">
-  <button class="view-all-btn">View All</button>
+  <a class="view-all-btn" href="#best-sellers">View All</a>
 </div>
 
 
@@ -297,7 +301,7 @@
 </script>
 
 <!-- best sellar section -->
-  <div class="product-row">
+  <div class="product-row" id="best-sellers">
     <div class="product-card">
       <div class="image-containerab">
         <img src="img/m1.png" alt="The Standard" class="main-img">
@@ -380,13 +384,13 @@
 
 <!-- View All button -->
  <div class="center-button">
-  <a href="">VIEW ALL</a>
+  <a href="#best-sellers">VIEW ALL</a>
 </div>
 <!-- view all button end here -->
 
 <!-- REVIEW SECTION -->
 
-<div class="review-grid">
+<div class="review-grid" id="reviews">
 
   <div class="review-card" style="background-image: url('img/ra1.png');">
     <div class="overlay">
@@ -413,7 +417,7 @@
   <div class="review-card" style="background-image: url('img/ra3.png');">
     <div class="overlay">
       <div class="stars">★★★★★</div>
-      <div class="review-text">“Something worth keeping forever & creating an heirloom from - full of decades of adventure, stories, and memories.”</div>
+      <div class="review-text">“Something worth keeping forever &amp; creating an heirloom from - full of decades of adventure, stories, and memories.”</div>
       <div class="review-location">
         <span>Endicott, US</span>
         <button class="verified-text">Verified</button>
@@ -426,7 +430,7 @@
 <!-- REVIEW SECTION END HERE -->
 
 <div class="button-wrapper">
-  <button class="view-all-btn">READ ALL OUR REVIEWS</button>
+  <a class="view-all-btn" href="#reviews">READ ALL OUR REVIEWS</a>
 </div>
 <section class="heirloom-section" style="margin-top: 10%;">
   <div class="container">
@@ -447,7 +451,7 @@
           takes you.</p>
         </div>
         
-        <a href="#" class="cta-button">SHOP BEST SELLERS</a>
+        <a href="#best-sellers" class="cta-button">SHOP BEST SELLERS</a>
       </div>
     </div>
     
@@ -456,7 +460,7 @@
     </div>
   </div>
 </section>
-<!----skip
+<!--
 <section class="our-story-section">
   <div class="story-container">
     <div class="story-image">
@@ -471,8 +475,8 @@
     </div>
   </div>
 </section>
------>
-<section class="heirloom-section" style="margin-top: 10px;" >
+-->
+<section class="heirloom-section" id="our-story">
   <div class="container">
     <div class="image-container">
       <img src="./img/r2.png" alt="Premium leather bag" class="hero-image">
@@ -495,12 +499,14 @@
           takes you.</p>
         </div>
         
-        <a href="#" class="cta-button">READ OUR STORY</a>
+        <a href="#our-story" class="cta-button">READ OUR STORY</a>
       </div>
     </div>
     
     
   </div>
+</section>
+
   <!--faqs-->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -600,7 +606,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class = "div3">
         <div class = "bottom-info-bar">
             <p>50,000+ Heirloom Bags Shipped</p>
-            <p>1 Year Warranty & 30 Day Returns</p>
+            <p>1 Year Warranty &amp; 30 Day Returns</p>
             <p>Rated 4.8/5 from 1300+ Reviews</p>
         </div>
     </div>
@@ -616,7 +622,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class = "div-footer-section">
         
         <div class = "section1-image section2">
-            <img src = "https://therealleathercompany.com/cdn/shop/files/the-real-leather-company-icon-white-svg.svg?v=1719396400&width=760" alt = "The Real Leather Co. White Icon">
+            <img src = "https://therealleathercompany.com/cdn/shop/files/the-real-leather-company-icon-white-svg.svg?v=1719396400&amp;width=760" alt = "The Real Leather Co. White Icon">
         </div>
         <div class = "sales section2">
             <h4>Shop</h4>
@@ -632,7 +638,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div class = "drop-menu-1">
                             <div class = "menu1-image-section">
                                 <div class = "menu1-image-container">
-                                    <img src = "https://therealleathercompany.com/cdn/shop/collections/the-morgan-17-inch-laptop-briefcase-top-grain-leather-for-men-model1_720x_7635bc1f-7244-4af1-9cb5-1c69f0afccc4.jpg?v=1743670125&width=640" alt= "Leather Briefcases">
+                                    <img src = "https://therealleathercompany.com/cdn/shop/collections/the-morgan-17-inch-laptop-briefcase-top-grain-leather-for-men-model1_720x_7635bc1f-7244-4af1-9cb5-1c69f0afccc4.jpg?v=1743670125&amp;width=640" alt= "Leather Briefcases">
                                 </div>
                                 <p>Leather Briefcases</p>
                             </div>
@@ -674,7 +680,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div class = "drop-menu-2">
                            <div class = "menu2-image-section">
                                 <div class = "menu1-image-container">
-                                <img src = "https://therealleathercompany.com/cdn/shop/collections/the-real-leather-company-leather-backpacks-for-men-and-women.jpg?v=1743679716&width=640" alt = "Leather Backpacks">
+                                <img src = "https://therealleathercompany.com/cdn/shop/collections/the-real-leather-company-leather-backpacks-for-men-and-women.jpg?v=1743679716&amp;width=640" alt = "Leather Backpacks">
                                 </div>
                                 <p>Leather Backpacks</p>
                             </div>
@@ -716,7 +722,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div class = "drop-menu-3">
                             <div class = "menu3-image-section">
                                 <div class = "menu1-image-container">
-                                <img src = "https://therealleathercompany.com/cdn/shop/collections/leather-wallets.jpg?v=1716550105&width=640" alt = "Leather Wallets">
+                                <img src = "https://therealleathercompany.com/cdn/shop/collections/leather-wallets.jpg?v=1716550105&amp;width=640" alt = "Leather Wallets">
                                 </div>
                                 <p>Leather Wallets</p>
                             </div>
@@ -729,7 +735,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 </ul>
                             </div>
                             <div class = "menu1-list-section">
-                                <h4>Wallets & Journals</h4>
+                                <h4>Wallets &amp; Journals</h4>
                                 <ul>
                                     <li>Leather Wallets</li>
                                     <li>Leather Card Holders</li>
@@ -756,7 +762,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
         <div class = "company section2">
             <h4>Company</h4>
-            <ul style="list-style: none;"">
+            <ul style="list-style: none;">
                 <li>
                     <a href = "index.html">Our Story</a>
                 </li>
@@ -793,7 +799,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <!-- Copyright and Legal Links -->
 <div class="footer__copyright">
-    <p class="copyright__content">© 2025,</p>
+    <p class="copyright__content">© <span id="copyrightYear">2026</span>,</p>
     <ul >
         <li>
             <a class = "realleather" href="index.html">The Real Leather Co.</a>
@@ -814,11 +820,30 @@ document.addEventListener('DOMContentLoaded', function () {
 </div>
 </footer>
 <script>
-  // Toggle mobile menu
-  document.getElementById('mobileMenuButton').addEventListener('click', function() {
-    const menu = document.getElementById('mobileNavMenu');
-    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  const mobileMenuButton = document.getElementById('mobileMenuButton');
+  const mobileMenu = document.getElementById('mobileNavMenu');
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('is-open');
+    mobileMenuButton.setAttribute('aria-expanded', 'false');
+    mobileMenuButton.setAttribute('aria-label', 'Open navigation menu');
+  }
+
+  mobileMenuButton.addEventListener('click', function() {
+    const isOpen = mobileMenu.classList.toggle('is-open');
+    mobileMenuButton.setAttribute('aria-expanded', String(isOpen));
+    mobileMenuButton.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
   });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeMobileMenu();
+  });
+
+  document.getElementById('copyrightYear').textContent = new Date().getFullYear();
 </script>
 
 </body>
